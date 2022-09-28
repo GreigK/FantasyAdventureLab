@@ -36,11 +36,13 @@ public class Barbarians extends Player {
         return rage * multiple;
     }
 
-
     public void swingWeapon(Enemies enemies){
         int newHealth = enemies.getHealth() - meleeHit.getHitPoint();
         enemies.setHealth(newHealth);
     }
 
-    
+
+
+
+
 }

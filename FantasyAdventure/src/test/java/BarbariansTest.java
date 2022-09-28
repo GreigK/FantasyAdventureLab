@@ -15,7 +15,7 @@ public class BarbariansTest {
     @Before
     public void before(){
         barbarians = new Barbarians("Conan", 100, 2, MeleeHit.SWORD);
-        enemies = new Enemies("Todd", 20);
+        enemies = new Enemies("Todd", 20, MeleeHit.CLUB);
     }
 
     @Test
@@ -35,7 +35,7 @@ public class BarbariansTest {
     @Test
     public void canHitEnemies(){
         barbarians.swingWeapon(enemies);
-        assertEquals(10, enemies.getHealth(),0);
+        assertEquals(10, enemies.getHealth());
     }
 
     @Test
@@ -43,6 +43,12 @@ public class BarbariansTest {
         barbarians.enrageHit(2);
         barbarians.swingWeapon(enemies);
         assertEquals(12, enemies.getHealth());
+    }
+
+    @Test
+    public void beHitByEnemies(){
+        enemies.swingWeapon(barbarians);
+        assertEquals(95, barbarians.getHealth());
     }
 
 

@@ -5,9 +5,9 @@ public enum MeleeHit {
     CLUB(5),
     AXE(15);
 
-    private Integer hitPoints;
+    private int hitPoints;
 
-    MeleeHit(Integer hitPoints) {
+    MeleeHit(int hitPoints) {
         this.hitPoints = hitPoints;
     }
 
